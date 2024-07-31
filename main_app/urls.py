@@ -7,5 +7,5 @@ urlpatterns = [
     path('students/<int:pk>', StudentRetrieveUpdateDestroy.as_view(), name='student-detail'),
     path('schoolforms', SchoolFormListCreate.as_view(), name='student-list-create'),
     path('schoolforms/<int:pk>', SchoolFormRetrieveUpdateDestroy.as_view(), name='student-detail'),
-    path('fill-school-form',SchoolFormFillUp.asView(),name="fill-school-form")
+    path('fill-school-form',SchoolFormFillUp.as_view(),name="fill-school-form")
 ]
