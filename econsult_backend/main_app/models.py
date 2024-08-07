@@ -1,62 +1,66 @@
-from datetime import timezone
+from datetime import datetime
 from django.db import models
 
 # Create your models here.
 
 class StudentModel(models.Model):
+
     full_name = models.CharField(max_length=50)
-    # date_of_birth = models.DateField()
-    age = models.IntegerField()
-    # gender = models.CharField(max_length=10)
-    # spouse_name = models.CharField(max_length=50)
+    date_of_birth = models.DateField(null=True)
+    gender = models.CharField(max_length=10,null=True)
+    spouse_name = models.CharField(max_length=50,null=True)
     nationality = models.CharField(max_length=50)
-    # place_of_birth = models.CharField(max_length=50)
-    # current_address = models.CharField(max_length=255)
-    phone_number = models.CharField(max_length=20)
-    email = models.EmailField(max_length=255)
+    place_of_birth = models.CharField(max_length=50,null=True)
+    occupation = models.CharField(max_length=255,null=True)
+    current_address = models.CharField(max_length=255,null=True)
 
-    # # educational background
-    # elementary_school_name = models.CharField(max_length=50)
-    # elementary_school_date_of_enrollment = models.DateField()
-    # elementary_school_date_of_graduation = models.DateField()
-    # elementary_school_start_date = models.DateField()
-    # elementary_school_end_date = models.DateField()
+    passport_number = models.CharField(max_length=20,null=True)
+    passport_issue_date = models.DateField(null=True)
+    passport_expire_date = models.DateField(null=True)
 
 
-    # junior_high_school_name = models.CharField(max_length=50)
-    # junior_high_school_date_of_enrollment = models.DateField()
-    # junior_high_school_date_of_graduation = models.DateField()
-    # junior_high_school_start_date = models.DateField()
-    # junior_high_school_end_date = models.DateField()
+    # educational background
+    elementary_school_name = models.CharField(max_length=50,null=True)
+    elementary_school_date_of_enrollment = models.DateField(null=True)
+    elementary_school_date_of_graduation = models.DateField(null=True)
+
+    junior_high_school_name = models.CharField(max_length=50,null=True)
+    junior_high_school_date_of_enrollment = models.DateField(null=True)
+    junior_high_school_date_of_graduation = models.DateField(null=True)
 
 
-    # high_school_name = models.CharField(max_length=50)
-    # high_school_date_of_enrollment = models.DateField()
-    # high_school_date_of_graduation = models.DateField()
-    # high_school_start_date = models.DateField()
-    # high_school_end_date = models.DateField()
+    high_school_name = models.CharField(max_length=50,null=True)
+    high_school_date_of_enrollment = models.DateField(null=True)
+    high_school_date_of_graduation = models.DateField(null=True)
 
-    # vocational_school_name = models.CharField(max_length=50)
-    # vocational_school_date_of_enrollment = models.DateField()
-    # vocational_school_date_of_graduation = models.DateField()
-    # vocational_school_start_date = models.DateField()
-    # vocational_school_end_date = models.DateField()
+    vocational_school_name = models.CharField(max_length=50,null=True)
+    vocational_school_date_of_enrollment = models.DateField(null=True)
+    vocational_school_date_of_graduation = models.DateField(null=True)
 
-    # university_name = models.CharField(max_length=50)
-    # university_date_of_enrollment = models.DateField()
-    # university_date_of_graduation = models.DateField()
-    # university_start_date = models.DateField()
-    # university_end_date = models.DateField()
+    university_name = models.CharField(max_length=50,null=True)
+    university_date_of_enrollment = models.DateField(null=True)
+    university_date_of_graduation = models.DateField(null=True)
 
-    # #work history
-    # name_of_company = models.CharField(max_length=50)
-    # occupation = models.CharField(max_length=50)
-    # date_of_entry = models.DateField()
-    # date_of_retirement = models.DateField()
+    #work history
+
+    company_name1 = models.CharField(max_length=50,null=True)
+    occupation1 = models.CharField(max_length=50,null=True)
+    date_of_entry1 = models.DateField(null=True)
+    date_of_retirement1 = models.DateField(null=True)
+
+    company_name2 = models.CharField(max_length=50,null=True)
+    occupation2 = models.CharField(max_length=50,null=True)
+    date_of_entry2 = models.DateField(null=True)
+    date_of_retirement2 = models.DateField(null=True)
+
+    # #family member
+
+    # father_name = models.CharField(max_length=50)
+    # father_date_of_birth
 
 
-
-
+    phone_number = models.CharField(max_length=20,null=True)
+    email = models.EmailField(max_length=255,null=True)
     created_at = models.DateTimeField(auto_now_add=True)
     updated_at = models.DateTimeField(auto_now=True)
 
